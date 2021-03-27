@@ -2,6 +2,9 @@
   --background-brown: #3B200F;
   --background-light-blue: #AFF0E6;
   --background-dark-blue: #0D363C;
+  --text-nothighlighted: #F4F4F4;
+  --text-highlighted: #E8B450;
+  --text-dropshadow: #A8BFBF;
 }
 
 .App {
@@ -13,6 +16,37 @@
   background-color: var(--background-light-blue);
 }
 
+.App #feature {
+  color: var(--text-nothighlighted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5em 25em;
+}
+
+
+.App #description {
+  color: var(--text-nothighlighted);
+  margin: 2em 15em;
+  font-size: 24px;
+}
+.App #tagline {
+  display: inline-flex;
+  align-items: center;
+  font-size: 36px;
+  text-shadow: 1px 2px 5px var(--text-dropshadow);
+}
+
+
+.App #slideshow {
+  margin: 4em 0em 0em 0em;
+}
+
+
+.App #feature p {
+  margin: 0em 2em;
+  text-align: left; 
+}
 
 
 .App footer {
@@ -20,7 +54,7 @@
 }
 
 .App footer span {
-  padding: 5em;
+  margin: 5em;
 }
 
 .App footer span img {
@@ -28,7 +62,7 @@
 }
 
 .App footer span a {
-  color: white;
+  color: var(--text-nothighlighted);
   text-decoration: none;
   display: inline-flex;
   align-items: center;

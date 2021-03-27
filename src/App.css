@@ -1,6 +1,7 @@
 :root {
   --background-brown: #3B200F;
   --background-light-blue: #AFF0E6;
+  --background-dark-blue: #0D363C;
 }
 
 .App {
@@ -10,4 +11,25 @@
 
 .App header {
   background-color: var(--background-light-blue);
+}
+
+
+
+.App footer {
+  background-color: var(--background-dark-blue);
+}
+
+.App footer span {
+  padding: 5em;
+}
+
+.App footer span img {
+  padding: 1em .25em;
+}
+
+.App footer span a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }

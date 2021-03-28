@@ -7,15 +7,99 @@
   --text-dropshadow: #A8BFBF;
 }
 
+body {
+  overflow-x: hidden;
+}
 .App {
   text-align: center;
   background-color: var(--background-brown);
+  overflow: hidden;
+  margin: 0;
 }
 
-.App header {
-  background-color: var(--background-light-blue);
+header {
+  background: radial-gradient(circle, var(--background-light-blue) 0%, var(--background-dark-blue) 200%);
+  height: 20vh;
+  position:absolute;
+  top: 0;
+  transition: top 0.5s;
 }
 
+header.sticky {
+  height: 10vh;
+  position: fixed;
+  top:0;
+  transition: top 0.5s;
+  z-index: 100;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--text-nothighlighted);
+  background: radial-gradient(circle, var(--background-light-blue) 0%, var(--background-dark-blue) 200%);
+  border-bottom: 10vh solid var(--background-brown);
+  border-left: 20vw solid transparent;
+  border-right: 20vw solid transparent;
+  height: 0;
+  top: 10vh;
+  width: 60vw;
+}
+
+header.sticky nav {
+  top: 1px;
+}
+
+header img {
+  width: 20vh;
+  height: 20vh;
+}
+
+header.sticky img {
+  height: 8vh;
+  width: auto;
+  position: relative;
+  top: 5vh;
+}
+
+nav a, nav span {
+  position: relative;
+  top: 1.25rem;
+  font-size: 1.5rem;
+}
+
+header.sticky nav a, header.sticky nav span {
+  top: 5vh;
+}
+
+nav a.currentPage {
+  font-weight: bold;
+}
+nav a:link {
+  color: var(--text-nothighlighted);
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: var(--text-nothighlighted);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--text-nothighlighted);
+  text-decoration: underline;
+}
+
+nav a:active {
+  text-decoration: underline;
+  color: var(--text-highlighted);
+}
+
+main {
+  margin-top: 20vh;
+}
 .App #feature {
   color: var(--text-nothighlighted);
   display: flex;

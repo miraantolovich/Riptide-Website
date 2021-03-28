@@ -1,18 +1,13 @@
 import './App.css';
+import Header from './Header.js';
+import useSticky from './hooks/useSticky.js';
 
-function App() {
+const App = () => {
+  const {isSticky} = useSticky();
   return (
     <div className="App">
-      <header>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/">About Us</a>
-          <a href="/">Updates</a>
-          <a href="/">Support</a>
-        </nav>
-        <img src="/assets/riptide-logo.png"></img>
-      </header>
-      <body>
+      <Header sticky={isSticky}></Header>
+      <main >
         <div id="description">
           <section id="tagline">
             <img src="/assets/boat-tagline.png"></img>
@@ -44,7 +39,7 @@ function App() {
             Those materials will come in handy.
           </p>
         </div>
-      </body>
+      </main>
 
       <footer>
         <span>
